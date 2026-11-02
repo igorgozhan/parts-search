@@ -1,0 +1,105 @@
+/* Нейтральная палитра поверх Bootstrap: тёплые серые тона, приглушённый серо-синий акцент */
+:root {
+  --bs-body-bg: #f3f1ee;
+  --bs-body-color: #46433f;
+  --bs-border-color: #dedbd5;
+  --bs-secondary-rgb: 138, 134, 128;
+  --bs-primary: #66768a;
+  --bs-primary-rgb: 102, 118, 138;
+  --bs-link-color: #55657a;
+  --bs-link-hover-color: #46546a;
+}
+
+h1, h2 {
+  color: #3a3835;
+}
+
+/* Поле поиска: без обводки и подсветки при фокусе */
+.search-input:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: var(--bs-border-color);
+}
+
+.form-control {
+  background-color: #fbfaf8;
+}
+
+/* Кнопка */
+.btn-primary {
+  --bs-btn-bg: #66768a;
+  --bs-btn-border-color: #66768a;
+  --bs-btn-hover-bg: #59687b;
+  --bs-btn-hover-border-color: #59687b;
+  --bs-btn-active-bg: #4f5d6f;
+  --bs-btn-active-border-color: #4f5d6f;
+  --bs-btn-disabled-bg: #66768a;
+  --bs-btn-disabled-border-color: #66768a;
+  --bs-btn-focus-shadow-rgb: 102, 118, 138;
+}
+
+.btn-outline-secondary {
+  --bs-btn-color: #6f6b65;
+  --bs-btn-border-color: #cfcbc4;
+  --bs-btn-hover-bg: #e7e4df;
+  --bs-btn-hover-border-color: #cfcbc4;
+  --bs-btn-hover-color: #46433f;
+  --bs-btn-active-bg: #dedbd5;
+  --bs-btn-active-border-color: #cfcbc4;
+  --bs-btn-active-color: #46433f;
+}
+
+/* Список производителей */
+.list-group {
+  --bs-list-group-bg: #fbfaf8;
+  --bs-list-group-border-color: #e4e1dc;
+  --bs-list-group-action-hover-bg: #efede9;
+  --bs-list-group-action-active-bg: #e7e4df;
+  --bs-list-group-active-bg: #e1e5ea;
+  --bs-list-group-active-border-color: #cdd4dc;
+  --bs-list-group-active-color: #3a4352;
+}
+
+/* Таблица */
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-hover-bg: rgba(102, 118, 138, 0.07);
+  --bs-table-border-color: #e4e1dc;
+}
+
+.table > thead {
+  --bs-table-color: #6f6b65;
+}
+
+.table-primary {
+  --bs-table-bg: #e8ebef;
+  --bs-table-border-color: #d9dee4;
+  --bs-table-color: #46433f;
+  --bs-table-hover-bg: #e0e4e9;
+}
+
+/* Плавная смена фона при наведении */
+@media (prefers-reduced-motion: no-preference) {
+  .list-group-item-action,
+  .btn {
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+  }
+
+  /* Bootstrap подсвечивает ячейки через inset box-shadow */
+  .table > :not(caption) > * > * {
+    transition: box-shadow 0.25s ease, background-color 0.25s ease;
+  }
+}
+
+/* Сообщения */
+.alert-info {
+  --bs-alert-bg: #ebe9e5;
+  --bs-alert-border-color: #dedbd5;
+  --bs-alert-color: #5a5650;
+}
+
+.alert-danger {
+  --bs-alert-bg: #f3e8e4;
+  --bs-alert-border-color: #e6d4cd;
+  --bs-alert-color: #8a5446;
+}
