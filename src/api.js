@@ -1,6 +1,9 @@
 // Клиент для API «Проценка» (см. wsprice.pdf).
 // Ключ берётся из .env (VITE_API_KEY); по умолчанию — демо-ключ из документации.
-const API_URL = 'http://api.favorit-parts.ru/hs/hsprice/'
+// Запросы идут на свой домен (/api/...), а прокси перенаправляет их на
+// http://api.favorit-parts.ru/hs/... — иначе на HTTPS-сайте браузер блокирует
+// запросы к http-API (mixed content). Прокси: vite.config.js (dev) и public/_redirects (Netlify).
+const API_URL = '/api/hsprice/'
 const API_KEY =
   import.meta.env.VITE_API_KEY || '00000000-0000-0000-0000-000000000001'
 

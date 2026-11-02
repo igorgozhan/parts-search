@@ -1,0 +1,2 @@
+# Netlify: proxy for the HTTP-only API (status 200 = rewrite, browser URL stays the same)
+/api/*  http://api.favorit-parts.ru/hs/:splat  200
